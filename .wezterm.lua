@@ -3,10 +3,12 @@ local wezterm = require("wezterm")
 local config = wezterm.config_builder()
 local mux = wezterm.mux
 local act = wezterm.action
+local is_windows = wezterm.target_triple:find("windows")
 
--- Defauls
-config.default_prog = { "C:/Program Files/Git/bin/bash.exe", "-i", "-l" }
-config.default_cwd = "D:projects"
+if is_windows then
+	config.default_prog = { "C:/Program Files/Git/bin/bash.exe", "-i", "-l" }
+	config.default_cwd = "D:projects"
+end
 
 -- Откртыть терминал на весь экран
 wezterm.on("gui-startup", function()
@@ -25,6 +27,10 @@ config.use_fancy_tab_bar = false
 -- 	saturation = 1.2,
 -- 	brightness = 1.5,
 -- }
+
+config.inactive_pane_hsb = {
+	brightness = 0.5,
+}
 
 -- Font
 adjust_window_size_when_changing_font_size = false
