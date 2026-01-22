@@ -1,0 +1,21 @@
+gui:
+  authorColors: {}
+  nerdFontsVersion: "3"
+  tabWidth: 2
+  expandFocusedSidePanel: true
+  # timeFormat: "02 Jan 06 15:04"
+  shortTimeFormat: "15:04"
+  showRandomTip: false
+  showCommandLog: false
+  statusPanelView: allBranchesLog
+  # showAuthorColors
+git:
+  paging:
+    externalDiffCommand: "C:/Users/vasil/AppData/Local/lazygit/git-diff.bat"
+
+  # branchLogCmd: "git log --oneline"
+  log:
+    order: date-order
+    showWholeGraph: true
+os:
+  editPreset: "nvim"
