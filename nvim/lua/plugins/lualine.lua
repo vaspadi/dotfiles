@@ -3,8 +3,8 @@ local git_ahead_behind_status = require("utils.git_ahead_behind_status")
 
 return {
   {
-    dir = "D:/projects/nvim-plugins/lualine.nvim/",
-    -- "nvim-lualine/lualine.nvim",
+    -- dir = "D:/projects/nvim-plugins/lualine.nvim/",
+    "nvim-lualine/lualine.nvim",
     opts = function()
       local lualine_require = require("lualine_require")
       lualine_require.require = require
@@ -31,7 +31,7 @@ return {
                 hint = icons.diagnostics.Hint,
               },
             },
-            { "filetype", icon_only = true, separator = "", padding = { left = 1, right = 0 } },
+            { "filetype",                   icon_only = true, separator = "", padding = { left = 1, right = 0 } },
             { LazyVim.lualine.pretty_path() },
           },
           lualine_x = {

@@ -1,3 +1,4 @@
+local utils = require('utils.utils')
 local ffi = require("ffi")
 
 ffi.cdef([[
@@ -8,7 +9,7 @@ ffi.cdef([[
   void* GetForegroundWindow(void);
 ]])
 
-local user32 = ffi.load("user32")
+local user32 = utils.is_windows() and ffi.load("user32") or nil
 
 local locales = {
   [0x0419] = "РУС",
@@ -17,6 +18,8 @@ local locales = {
 
 return function()
   local ok, result = pcall(function()
+    if user32 == nil then return "??" end
+
     local hwnd = user32.GetForegroundWindow()
 
     if hwnd == nil then

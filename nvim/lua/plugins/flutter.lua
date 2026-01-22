@@ -1,13 +1,13 @@
 local dart_exception_breakpoints = {
-  { label = "Never", value = {} },
-  { label = "All", value = { "All" } },
+  { label = "Never",     value = {} },
+  { label = "All",       value = { "All" } },
   { label = "Unhandled", value = { "Unhandled" } },
 }
 _G.dart_exception_breakpoints = dart_exception_breakpoints[1]
 
 return {
-  -- "nvim-flutter/flutter-tools.nvim",
-  dir = "D:/projects/nvim-plugins/flutter-tools.nvim/",
+  "nvim-flutter/flutter-tools.nvim",
+  -- dir = "D:/projects/nvim-plugins/flutter-tools.nvim/",
   lazy = false,
   dependencies = {
     "nvim-lua/plenary.nvim",
