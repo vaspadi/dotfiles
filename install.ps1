@@ -1,4 +1,5 @@
 New-Item -ItemType SymbolicLink -Path $HOME\.wezterm.lua -Target $HOME\dotfiles\.wezterm.lua
+New-Item -ItemType SymbolicLink -Path $HOME\.bashrc -Target $HOME\dotfiles\.bashrc
 
 if ($IsWindows) {
   New-Item -ItemType SymbolicLink -Path "$env:APPDATA/lazygit/config.yml" -Target "$HOME/dotfiles/lazygit/config-windows.yml"
