@@ -7,3 +7,4 @@ if ($IsWindows) {
   New-Item -ItemType SymbolicLink -Path "$HOME/.config/lazygit/config.yml" -Target "$HOME/dotfiles/lazygit/config-linux.yml"
 }
 
+New-Item -ItemType SymbolicLink -Path $HOME\.config\posting\config.yaml -Target $HOME\dotfiles\posting\config.yaml
