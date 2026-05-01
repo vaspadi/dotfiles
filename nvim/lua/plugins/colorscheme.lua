@@ -1,32 +1,26 @@
 return {
+  {
+    "LazyVim/LazyVim",
+    opts = { colorscheme = "monokai_soda" },
+  },
   { "catppuccin/nvim", enabled = false },
+  { "folke/tokyonight.nvim", enabled = false },
   {
     "tanvirtin/monokai.nvim",
-    -- config = function()
-    --   local monokai = require("monokai")
-    --   local palette = monokai.soda
-    --
-    --   require("monokai").setup({
-    --     palette = palette,
-    --     italics = false,
-    --     custom_hlgroups = {
-    --       ExplorerGitModified = { fg = palette.yellow },
-    --       ExplorerGitAdd = { fg = palette.green },
-    --       LualineInactiveTab = { fg = palette.white, bg = "#292d30" },
-    --       LualineActiveTab = { fg = palette.orange, bg = "#292d30" },
-    --       LualineAheadBehindInfo = { fg = palette.white, bg = "#292d30" },
-    --       LualineSearchcount = { fg = palette.yellow, bg = palette.base4 },
-    --       LualineActiveWinbarFilename = { fg = palette.orange, bg = "#292d30" },
-    --       LualineInactiveWinbarFilename = { fg = palette.base7, bg = "#292d30" },
-    --     },
-    --   })
-    --
-    --   vim.api.nvim_set_hl(0, "DiagnosticUnnecessary", {
-    --     undercurl = true,
-    --     fg = palette.grey,
-    --     sp = palette.pink,
-    --   })
-    -- end,
+    config = function()
+      local monokai = require("monokai")
+      local palette = monokai.soda
+
+      vim.api.nvim_create_autocmd("ColorScheme", {
+        callback = function()
+          vim.api.nvim_set_hl(0, "TabLineSel", { fg = palette.base2, bg = palette.orange })
+          vim.api.nvim_set_hl(0, "TabLineFill", { fg = palette.white, bg = palette.base3 })
+
+          vim.api.nvim_set_hl(0, "WinBar", { fg = palette.orange, bg = palette.base2 })
+          vim.api.nvim_set_hl(0, "WinBarNC", { fg = palette.base6, bg = palette.base2 })
+        end,
+      })
+    end,
   },
 
   -- CLASSIC
@@ -56,21 +50,34 @@ return {
   --     diff_change = '#27406b',
   --     diff_text = '#23324d',
   -- },
-  {
-    "LazyVim/LazyVim",
-    opts = {
-      colorscheme = "monokai_soda",
-    },
-    -- lazy = false,
-    -- keys = {
-    --   { "<leader>wH", false },
-    --   { "<leader>wJ", false },
-    --   { "<leader>wK", false },
-    --   { "<leader>wL", false },
-    --   { "<leader>wh", false },
-    --   { "<leader>wj", false },
-    --   { "<leader>wk", false },
-    --   { "<leader>wl", false },
-    -- },
-  },
+  --
+  -- SODA
+  -- palette = {
+  --   name = "monokai_soda",
+  --   base0 = "#222426",
+  --   base1 = "#211F22",
+  --   base2 = "#26292C",
+  --   base3 = "#2E323C",
+  --   base4 = "#333842",
+  --   base5 = "#4d5154",
+  --   base6 = "#72696A",
+  --   base7 = "#B1B1B1",
+  --   base8 = "#e3e3e1",
+  --   border = "#A1B5B1",
+  --   brown = "#504945",
+  --   white = "#f6f6ec",
+  --   grey = "#72696A",
+  --   black = "#000000",
+  --   pink = "#f3005f",
+  --   green = "#97e023",
+  --   aqua = "#78DCE8",
+  --   yellow = "#dfd561",
+  --   orange = "#fa8419",
+  --   purple = "#9c64fe",
+  --   red = "#f3005f",
+  --   diff_add = "#3d5213",
+  --   diff_remove = "#4a0f23",
+  --   diff_change = "#27406b",
+  --   diff_text = "#23324d",
+  -- },
 }
