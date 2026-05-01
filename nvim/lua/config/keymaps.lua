@@ -3,6 +3,9 @@ local del = vim.keymap.del
 
 del("n", "<leader>gd")
 
+map("n", "<leader><Tab>h", "<cmd>:-tabmove<cr>", { desc = "Move tab to left" })
+map("n", "<leader><Tab>l", "<cmd>:+tabmove<cr>", { desc = "Move tab to right" })
+
 -- <windows>
 map("n", "<leader>wh", "<C-w>H", { remap = true, desc = "Move window to far left" })
 map("n", "<leader>wj", "<C-w>J", { remap = true, desc = "Move window to far bottom" })

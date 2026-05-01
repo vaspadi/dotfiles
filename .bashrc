@@ -9,8 +9,11 @@ export FZF_DEFAULT_OPTS="
 "
 export FZF_DEFAULT_COMMAND='fd -I -E .git -E node_modules -E build'
 
-alias ls='ls --color=auto'
-alias ll='ls -alF'
+alias ls="lsd -A --group-directories-first"
+alias ll='ls -l --blocks size,date,git,name'
+alias lt='ls --tree'
+
+alias cat="bat"
 
 alias f="fvm flutter"
 alias d="fvm dart"
@@ -28,8 +31,20 @@ PS1="$PS1"'\[\033[36m\]' # change color to cyan
 PS1="$PS1"'\A '          # current working directory
 PS1="$PS1"'\[\033[33m\]' # change to brownish yellow
 PS1="$PS1"'\w'           # current working directory
-PS1="$PS1"'\[\033[0m\]'  # change color
-PS1="$PS1"'   '         # prompt: always $
+if test -z "$WINELOADERNOEXEC"; then
+  GIT_EXEC_PATH="$(git --exec-path 2>/dev/null)"
+  COMPLETION_PATH="${GIT_EXEC_PATH%/libexec/git-core}"
+  COMPLETION_PATH="${COMPLETION_PATH%/lib/git-core}"
+  COMPLETION_PATH="$COMPLETION_PATH/share/git/completion"
+  if test -f "$COMPLETION_PATH/git-prompt.sh"; then
+    . "$COMPLETION_PATH/git-completion.bash"
+    . "$COMPLETION_PATH/git-prompt.sh"
+    PS1="$PS1"'\[\033[32m\]' # change color to cyan
+    PS1="$PS1"'`__git_ps1`'  # bash function
+  fi
+fi
+PS1="$PS1"'\[\033[0m\]' # change color
+PS1="$PS1"'   '        # prompt: always $
 
 shopt -s checkwinsize
 
@@ -41,5 +56,5 @@ if ! shopt -oq posix; then
   fi
 fi
 
-eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
+# eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 eval "$(zoxide init bash --cmd cd)"

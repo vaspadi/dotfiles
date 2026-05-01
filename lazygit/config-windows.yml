@@ -19,3 +19,4 @@ git:
     showWholeGraph: true
 os:
   editPreset: "nvim"
+  editInTerminal: true

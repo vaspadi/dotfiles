@@ -47,6 +47,9 @@ config.window_padding = {
 	bottom = 0,
 }
 
+-- Other
+config.window_close_confirmation = "NeverPrompt"
+
 -- Показывать текущую директорию в названии вкладки
 wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_width)
 	local url = tab.active_pane.current_working_dir

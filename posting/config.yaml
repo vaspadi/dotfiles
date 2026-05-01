@@ -1,1 +1,3 @@
 editor: nvim
+heading:
+  visible: false
