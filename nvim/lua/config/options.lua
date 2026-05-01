@@ -6,3 +6,5 @@
 -- vim.g.autoformat = false
 vim.opt.swapfile = false
 vim.g.lazyvim_picker = "fzf"
+-- vim.g.lazyvim_ts_lsp = "tsgo"
+vim.o.showtabline = 0
