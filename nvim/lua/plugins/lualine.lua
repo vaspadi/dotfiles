@@ -38,7 +38,7 @@ return {
           {
             "diagnostics",
             color = "WinBarNC",
-            padding = 0,
+            padding = { left = 0, right = 1 },
             symbols = {
               error = icons.diagnostics.Error,
               warn = icons.diagnostics.Warn,
@@ -71,12 +71,7 @@ return {
         winbar = winbar,
         inactive_winbar = inactive_winbar,
         sections = {
-          lualine_a = {},
-          lualine_b = {
-            "branch",
-            git_ahead_behind_status,
-          },
-          lualine_c = {
+          lualine_a = {
             {
               "tabs",
               tabs_color = {
@@ -89,6 +84,12 @@ return {
                 return vim.fn.tabpagenr("$") > 1
               end,
             },
+          },
+          lualine_b = {
+            "branch",
+            git_ahead_behind_status,
+          },
+          lualine_c = {
             LazyVim.lualine.root_dir(),
           },
           lualine_x = {
@@ -114,10 +115,7 @@ return {
             { "searchcount" },
             {
               "location",
-              padding = {
-                left = 2,
-                right = 1,
-              },
+              padding = { left = 2, right = 1 },
             },
           },
           lualine_y = {

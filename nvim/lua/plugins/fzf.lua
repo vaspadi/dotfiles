@@ -5,6 +5,24 @@ return {
     defaults = {
       formatter = "path.filename_first",
     },
+    winopts = {
+      winopts = {
+        relativenumber = true,
+      },
+    },
+    files = {
+      -- previewer = false,
+      git_icons = true,
+      winopts = {
+        width = 0.4,
+        height = 0.4,
+        row = 0.1,
+        preview = {
+          hidden = true,
+          title = false,
+        },
+      },
+    },
     previewers = {
       builtin = {
         extensions = {

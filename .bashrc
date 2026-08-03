@@ -19,9 +19,12 @@ alias f="fvm flutter"
 alias d="fvm dart"
 alias fbuild="fvm flutter build appbundle --release --obfuscate --split-debug-info=build/app/outputs/symbols"
 alias mvapk='fd ".apk$|app-release.aab$" -tf -I | fzf | xargs -r cp -t ~/Desktop/'
+alias fclean="fvm flutter pub cache clean --force && fvm flutter clean && fvm flutter pub get"
 
 alias gs="git status"
 alias gl="git log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(blue)<%an>%Creset' --abbrev-commit --date-order"
+
+alias newssh='ssh-keygen -t rsa -b 4096 -C "vasiliev.work1@gmail.com"'
 
 # alias cpclip='cp "$(cygpath "$(powershell.exe -command Get-Clipboard)")" .'
 # alias cleanf='fvm flutter pub cache clean --force && fvm flutter clean'
