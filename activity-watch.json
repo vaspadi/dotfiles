@@ -1,0 +1,263 @@
+{
+  "categories": [
+    {
+      "data": {
+        "color": "#CCC"
+      },
+      "id": 0,
+      "name": [
+        "Uncategorized"
+      ],
+      "rule": {
+        "type": "none"
+      },
+      "name_pretty": "Uncategorized",
+      "subname": "Uncategorized",
+      "parent": null,
+      "depth": 0
+    },
+    {
+      "data": {
+        "color": "#F44E3B"
+      },
+      "id": 1,
+      "name": [
+        "Media"
+      ],
+      "rule": {
+        "type": "none"
+      },
+      "name_pretty": "Media",
+      "subname": "Media",
+      "parent": null,
+      "depth": 0
+    },
+    {
+      "data": {
+        "color": "#FDA1FF"
+      },
+      "id": 2,
+      "name": [
+        "Media",
+        "Instagram"
+      ],
+      "rule": {
+        "ignore_case": true,
+        "regex": "instagram",
+        "type": "regex"
+      },
+      "name_pretty": "Media>Instagram",
+      "subname": "Instagram",
+      "parent": [
+        "Media"
+      ],
+      "depth": 1
+    },
+    {
+      "data": {},
+      "id": 3,
+      "name": [
+        "Media",
+        "Youtube"
+      ],
+      "rule": {
+        "ignore_case": true,
+        "regex": "youtube",
+        "type": "regex"
+      },
+      "name_pretty": "Media>Youtube",
+      "subname": "Youtube",
+      "parent": [
+        "Media"
+      ],
+      "depth": 1
+    },
+    {
+      "data": {
+        "color": "#68BC00"
+      },
+      "id": 4,
+      "name": [
+        "Work"
+      ],
+      "rule": {
+        "ignore_case": true,
+        "regex": "wezterm|bash|curl|wasm|cmd|dart",
+        "type": "regex"
+      },
+      "name_pretty": "Work",
+      "subname": "Work",
+      "parent": null,
+      "depth": 0
+    },
+    {
+      "data": {
+        "color": "#AEA1FF"
+      },
+      "id": 5,
+      "name": [
+        "Productivity"
+      ],
+      "rule": {
+        "type": "none"
+      },
+      "name_pretty": "Productivity",
+      "subname": "Productivity",
+      "parent": null,
+      "depth": 0
+    },
+    {
+      "data": {
+        "color": "#7B64FF"
+      },
+      "id": 6,
+      "name": [
+        "Productivity",
+        "Activity Watch"
+      ],
+      "rule": {
+        "ignore_case": true,
+        "regex": "activitywatch|localhost:5600",
+        "type": "regex"
+      },
+      "name_pretty": "Productivity>Activity Watch",
+      "subname": "Activity Watch",
+      "parent": [
+        "Productivity"
+      ],
+      "depth": 1
+    },
+    {
+      "data": {},
+      "id": 7,
+      "name": [
+        "Productivity",
+        "Notes"
+      ],
+      "rule": {
+        "ignore_case": true,
+        "regex": "obsidian|notion",
+        "type": "regex"
+      },
+      "name_pretty": "Productivity>Notes",
+      "subname": "Notes",
+      "parent": [
+        "Productivity"
+      ],
+      "depth": 1
+    },
+    {
+      "data": {},
+      "id": 8,
+      "name": [
+        "Productivity",
+        "Monkeytype"
+      ],
+      "rule": {
+        "ignore_case": true,
+        "regex": "monkeytype",
+        "type": "regex"
+      },
+      "name_pretty": "Productivity>Monkeytype",
+      "subname": "Monkeytype",
+      "parent": [
+        "Productivity"
+      ],
+      "depth": 1
+    },
+    {
+      "data": {
+        "color": "#73D8FF"
+      },
+      "id": 9,
+      "name": [
+        "Comms"
+      ],
+      "rule": {
+        "ignore_case": true,
+        "regex": "telegram|whatsapp|meet|telemost|Телемосте",
+        "type": "regex"
+      },
+      "name_pretty": "Comms",
+      "subname": "Comms",
+      "parent": null,
+      "depth": 0
+    },
+    {
+      "data": {},
+      "id": 10,
+      "name": [
+        "Work",
+        "Ollis"
+      ],
+      "rule": {
+        "ignore_case": true,
+        "regex": "ollis",
+        "type": "regex"
+      },
+      "name_pretty": "Work>Ollis",
+      "subname": "Ollis",
+      "parent": [
+        "Work"
+      ],
+      "depth": 1
+    },
+    {
+      "data": {},
+      "id": 11,
+      "name": [
+        "Work",
+        "ChatGPT"
+      ],
+      "rule": {
+        "ignore_case": true,
+        "regex": "chatgpt",
+        "type": "regex"
+      },
+      "name_pretty": "Work>ChatGPT",
+      "subname": "ChatGPT",
+      "parent": [
+        "Work"
+      ],
+      "depth": 1
+    },
+    {
+      "data": {},
+      "id": 12,
+      "name": [
+        "Work",
+        "2 berega"
+      ],
+      "rule": {
+        "ignore_case": true,
+        "regex": "2-berega|ecom-mobile-lib|2 Berega",
+        "type": "regex"
+      },
+      "name_pretty": "Work>2 berega",
+      "subname": "2 berega",
+      "parent": [
+        "Work"
+      ],
+      "depth": 1
+    },
+    {
+      "data": {},
+      "id": 13,
+      "name": [
+        "Work",
+        "Delivery Hub"
+      ],
+      "rule": {
+        "ignore_case": true,
+        "regex": "delivery_hub|deliveryhub",
+        "type": "regex"
+      },
+      "name_pretty": "Work>Delivery Hub",
+      "subname": "Delivery Hub",
+      "parent": [
+        "Work"
+      ],
+      "depth": 1
+    }
+  ]
+}
